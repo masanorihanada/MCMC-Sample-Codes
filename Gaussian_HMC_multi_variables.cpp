@@ -179,7 +179,7 @@ int main()
         << std::endl;
     }
   }
-  
+  outputfile.close();
   return 0;
 }
   
