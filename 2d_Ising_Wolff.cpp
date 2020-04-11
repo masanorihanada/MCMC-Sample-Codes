@@ -184,6 +184,8 @@ int main()
       }
     }
   }
+  outputfile.close();
+  outputconfig.close();
   return 0;
 }
   
