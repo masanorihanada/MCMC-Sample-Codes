@@ -39,7 +39,7 @@ double calc_action(const double A[ndim][ndim],const double mu[ndim]){
     -log(A[0][0]*A[1][1]-A[0][1]*A[1][0]);
   action=0.5e0*action*nsample; 
   //add the contribution from the prior distribution
-  action=action+0.5e0*A[0][0]*A[0][0]+0.5e0*A[0][0]*A[1][1]+A[0][1]*A[0][1]+0.5e0*mu[0]*mu[0]+0.5e0*mu[1]*mu[1];
+  action=action+0.5e0*A[0][0]*A[0][0]+0.5e0*A[1][1]*A[1][1]+A[0][1]*A[0][1]+0.5e0*mu[0]*mu[0]+0.5e0*mu[1]*mu[1];
   
   return action;
 }
