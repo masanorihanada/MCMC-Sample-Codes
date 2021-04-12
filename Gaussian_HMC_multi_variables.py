@@ -88,6 +88,10 @@ data1=[data_for_plot[i][0] for i in range(len(data_for_plot))]
 data2=[data_for_plot[i][1] for i in range(len(data_for_plot))]
 data3=[data_for_plot[i][2] for i in range(len(data_for_plot))]
 
+
+############
+### plot ###
+############
 plt.figure(figsize=(15,5))
 plt.axes().set_aspect('equal')
 ##
