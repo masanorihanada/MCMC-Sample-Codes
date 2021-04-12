@@ -1,6 +1,7 @@
 import numpy as np
 import os
 import sys
+from matplotlib import pyplot as plt
 # seed of random numbers is the system time by default
 
 NITER = 4096000
@@ -110,7 +111,14 @@ with open(path_output, mode='w') as output:
         if((iter+1)%NSKIP == 0):
             print(total_spin,energy,naccept/(iter+1),file=output)
             print(total_spin,energy,naccept/(iter+1))
-
+            
+######################################
+### 2D plot of final configuration ###
+######################################
+plt.figure()
+plt.imshow(spin,interpolation='nearest',vmin=0,vmax=1,cmap='jet')
+plt.show()
+            
 #########################
 ### save final config ###
 #########################
