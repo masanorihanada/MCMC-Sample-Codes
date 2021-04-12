@@ -17,9 +17,12 @@ z = 0
 #################
 ### Main part ###
 #################
+
+# for plot
 data1=[]
 data2=[]
 data3=[]
+
 for iter in range(NITER):
     #update x
     sigma = 1.0/np.sqrt(A[0][0])
@@ -42,6 +45,9 @@ for iter in range(NITER):
     data2.append(y)
     data3.append(z)
 
+############
+### plot ###
+############
 plt.figure(figsize=(15,5))
 plt.axes().set_aspect('equal')
 ##
