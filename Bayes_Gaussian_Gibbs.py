@@ -116,11 +116,11 @@ ax3.set_xlabel("$A_{12}=A_{21}$")
 ##
 ax4 = plt.subplot(2, 3, 4)
 ax4.hist(mu0,bins=50,density=True)
-ax4.set_xlabel("$\mu_0$")
+ax4.set_xlabel("$\mu_1$")
 ##
 ax5 = plt.subplot(2, 3, 5)
 ax5.hist(mu1,bins=50,density=True)
-ax5.set_xlabel("$\mu_1$")
+ax5.set_xlabel("$\mu_2$")
 ##
 plt.show()
 
