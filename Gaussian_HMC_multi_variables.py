@@ -81,7 +81,7 @@ for iter in range(NITER):
     ### data output ###
     ###################
     if((iter+1)%10 == 0):#output the results every ten steps.
-        print(*x,naccept/iter)
+        print(*x,naccept/(iter+1))
         data_for_plot.append(x)
 
 data1=[data_for_plot[i][0] for i in range(len(data_for_plot))]
