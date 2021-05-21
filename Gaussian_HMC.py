@@ -29,7 +29,7 @@ def calc_delh(x):
 ### Molecular evolution  ###
 #############################
 def Molecular_Dynamics(x):
-    # Mementum p is chosen to be Gaussian ##
+    # Momentum p is chosen to be Gaussian ##
     p = np.random.randn()
     # calculate Hamiltonian ##
     ham_init = calc_hamiltonian(x,p)
