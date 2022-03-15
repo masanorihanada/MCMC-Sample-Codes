@@ -26,7 +26,7 @@ int main(void){
       double action_fin=-515e0*log(p)-485e0*log(1-p)+100e0*pow(p-0.9e0,2e0);
       /* Metropolis test */
       double metropolis = (double)rand()/RAND_MAX;
-      if(exp(action_init-action_fin > metropolis))
+      if(exp(action_init-action_fin) > metropolis))
 	      /* accept */
 	      naccept=naccept+1;
       else 
