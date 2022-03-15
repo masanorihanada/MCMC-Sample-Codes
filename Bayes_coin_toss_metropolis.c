@@ -20,17 +20,18 @@ int main(void){
     dp=(dp-0.5e0)*step_size*2e0;
     p=p+dp;
     
-    double action_fin=-515e0*log(p)-485e0*log(1-p)+100e0*pow(p-0.9e0,2e0);
-    
-    /* Metropolis test */
-    double metropolis = (double)rand()/RAND_MAX;
-    if((p >= 0e0)&&(p<=1e0)&&(exp(action_init-action_fin) > metropolis))
-      /* accept */
-      naccept=naccept+1;
-    
-    else 
-      /* reject */
+    if((p < 0e0)||(p > 1e0))/* eject if p<0 or p>1 */
       p=backup_p;
+    else{
+      double action_fin=-515e0*log(p)-485e0*log(1-p)+100e0*pow(p-0.9e0,2e0);
+      /* Metropolis test */
+      double metropolis = (double)rand()/RAND_MAX;
+      if(exp(action_init-action_fin > metropolis))
+	      /* accept */
+	      naccept=naccept+1;
+      else 
+	      /* reject */
+	      p=backup_p;}
     
     /* data output */	
     printf("%.10f  %f\n",p,(double)naccept/iter);}
